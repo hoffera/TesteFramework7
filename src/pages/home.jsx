@@ -5,14 +5,10 @@ import {
   NavLeft,
   NavTitle,
   NavTitleLarge,
-  NavRight,
   Link,
-  Toolbar,
   Block,
-  BlockTitle,
   List,
   ListItem,
-  Button
 } from 'framework7-react';
 
 const HomePage = () => (
@@ -22,48 +18,42 @@ const HomePage = () => (
       <NavLeft>
         <Link iconIos="f7:menu" iconMd="material:menu" panelOpen="left" />
       </NavLeft>
-      <NavTitle sliding>Teste</NavTitle>
-      <NavRight>
-        <Link iconIos="f7:menu" iconMd="material:menu" panelOpen="right" />
-      </NavRight>
-      <NavTitleLarge>Teste</NavTitleLarge>
+      <NavTitle sliding>Exemplo prático Framework7</NavTitle>
+      <NavTitleLarge>Exemplo prático Framework7</NavTitleLarge>
     </Navbar>
 
     {/* Page content */}
     <Block>
-      <p>This is an example of tabs-layout application. The main point of such tabbed layout is that each tab contains independent view with its own routing and navigation.</p>
-
-      <p>Each tab/view may have different layout, different navbar type (dynamic, fixed or static) or without navbar like this tab.</p>
-    </Block>
-    <BlockTitle>Navigation</BlockTitle>
-    <List strong inset dividersIos>
-      <ListItem link="/about/" title="About"/>
-      <ListItem link="/form/" title="Form"/>
-    </List>
-
-    <BlockTitle>Modals</BlockTitle>
-    <Block className="grid grid-cols-2 grid-gap">
-      <Button fill popupOpen="#my-popup">Popup</Button>
-      <Button fill loginScreenOpen="#my-login-screen">Login Screen</Button>
-    </Block>
-
-    <BlockTitle>Panels</BlockTitle>
-    <Block className="grid grid-cols-2 grid-gap">
-      <Button fill panelOpen="left">Left Panel</Button>
-      <Button fill panelOpen="right">Right Panel</Button>
-    </Block>
+  <div className="logo-container">
+    <img
+      src="https://www.univali.br/Style%20Library/img/logo.png"
+      className="logo"
+      alt="Mic logo"
+    />
+  </div>
+</Block>
 
     <List strong inset dividersIos>
+
+
       <ListItem
-        title="Dynamic (Component) Route"
+        title="Tela exemplo Login"
+        badgeColor='red'
+         link="#my-login-screent"
+        loginScreenOpen="#my-login-screen"
+      />
+
+      <ListItem
+        title="Rota dinamica"
         link="/dynamic-route/blog/45/post/125/?foo=bar#about"
       />
+
       <ListItem
-        title="Default Route (404)"
+        title="Rota não existente"
         link="/load-something-that-doesnt-exist/"
       />
       <ListItem
-        title="Request Data & Load"
+        title="Requisição Data & Load"
         link="/request-and-load/user/123456/"
       />
     </List>

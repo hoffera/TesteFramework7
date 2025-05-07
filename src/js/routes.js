@@ -49,16 +49,15 @@ var routes = [
       // Show Preloader
       app.preloader.show();
 
-      // User ID from request
-      var userId = to.params.userId;
+     
 
       // Simulate Ajax Request
       setTimeout(function () {
         // We got user data from request
         var user = {
-          firstName: 'Vladimir',
-          lastName: 'Kharlampidi',
-          about: 'Hello, i am creator of Framework7! Hope you like it!',
+          firstName: 'Felipe',
+          lastName: 'Hoffmeister',
+          about: 'Hello!',
           links: [
             {
               title: 'Framework7 Website',
